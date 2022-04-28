@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dice</title>
+    <style>
+        
+        #btn{
+            margin: auto;
+            width: 500px;
+            font-size: 30px;  
+            background-color: rgb(161, 216, 116); 
+            color: rgb(189, 110, 6);
+        }
+        h1{
+            font-size: 60px;
+        }
+
+    </style>
+</head>
+<body>
+    <button id="btn" onclick="dice()">Throw Dice</button>
+    <h1></h1>
+</body>
+</html>
+<script>
+   
+    function dice(){
+       
+        var number=Math.floor(Math.random() * 6) + 1;
+       //console.log(number)
+       document.querySelector("h1").textContent=number;
+       if(number==1){
+          document.querySelector("h1").style.color="yellow";
+       }
+       else if(number==6){
+        document.querySelector("h1").style.color ="green";
+
+       }
+       else{
+        document.querySelector("h1").style.color="red";
+       }
+       
+    }
+
+</script>
